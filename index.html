@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -8,28 +7,11 @@
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0f4c81">
   <link rel="icon" href="/icons/icon-192.png">
-  <style>
-    html, body {
-      margin: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
 </head>
 <body>
-  <iframe src="https://nwh-rma.streamlit.app"></iframe>
-
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(() => console.log('✅ Service Worker registered'))
-        .catch(err => console.error('❌ SW registration failed:', err));
-    }
+    // Chuyển hướng ngay sang Streamlit app
+    window.location.replace("https://nwh-rma.streamlit.app");
   </script>
 </body>
 </html>
